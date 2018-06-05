@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Sick leave
+      </h1>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="full-name-f1">How many days sick leave have they taken in the last 12 months?</label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+      </div>
+
+
+      <p><a class="button" href="submit">Save and continue</a></p>
+      <p><a href="#">Save record</a></p>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
