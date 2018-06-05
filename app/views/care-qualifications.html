@@ -13,40 +13,31 @@
       <a class="link-back" href="/url/of/previous/page">Back</a>
 
       <h1 class="heading-large">
-        Nationality
+        Social care qualifications
       </h1>
 
       <div class="form-group">
         <fieldset>
 
           <legend>
-            <p class="form-label-bold">
-              Are they British?
-            </p>
+            <p class="form-label-bold">Do they have a social care qualification?</p>
           </legend>
 
           <div class="multiple-choice" data-target="contact-by-email">
             <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
             <label for="example-contact-by-email">Yes</label>
           </div>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+
+            <div class="form-group">
+              <label class="form-label" for="full-name-f1">What level is the qualification?</label>
+              <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+            </div>
+          </div>
 
           <div class="multiple-choice" data-target="contact-by-phone">
             <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
             <label for="example-contact-by-phone">No</label>
-          </div>
-          <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
-            <legend>
-                  <p>Do they hold British citizenship?</p>
-            </legend>
-
-                <div class="multiple-choice">
-                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                  <label for="radio-1">Yes</label>
-                </div>
-                <div class="multiple-choice">
-                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
-                  <label for="radio-2">No</label>
-                </div>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-text">
@@ -55,14 +46,13 @@
           </div>
 
         </fieldset>
+
       </div>
 
-      <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What is their nationality?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-      </div>
+      <p><a href="#">Add a qualification</a></p>
 
-      <p><a class="button" href="place-of-birth">Save and continue</a></p>
+
+      <p><a class="button" href="other-qualifications">Save and continue</a></p>
       <p><a href="#">Save record</a></p>
 
     </div>
