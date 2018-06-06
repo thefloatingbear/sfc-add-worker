@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="hourly-pay-types">Back</a>
+
+      <h1 class="heading-large">Worker record for {{ data['record-name'] }}
+      </h1>
+
+      <h2 class="heading-medium">
+        What are their different hourly rates?
+      </h2>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <table id="numTable">
+          <tr>
+            <th>Type of pay</th>
+            <th>Rate of pay</th>
+            <th>Hours worked in the last 7 days</th>
+          </tr>
+          <tr>
+            <td><div contenteditable></div></td>
+            <td><div contenteditable></div></td>
+            <td><div contenteditable></div></td>
+          </tr>
+        </table>
+
+        <a href="#">Add another</a>
+
+        <div class="form-group">
+          <br>
+          <input class="button" type="submit" value="Save and continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

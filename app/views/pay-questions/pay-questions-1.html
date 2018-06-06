@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="../index">Back</a>
+
+      <h1 class="heading-large">Worker record for {{ data['record-name'] }}
+      </h1>
+
+      <form action="hourly-pay-types" method="post" class="form">
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">
+              How are they being paid?
+            </p>
+          </legend>
+
+          <div class="multiple-choice" data-target="hourly-pay">
+            <input id="hourly-pay" type="radio" name="pay-group" value="hourly pay" {{ checked('pay-group','hourly pay') }}>
+            <label for="hourly-pay">Hourly</label>
+          </div>
+
+          <div class="multiple-choice" data-target="annual-salary">
+            <input id="annual-pay" type="radio" name="pay-group" value="annually" {{ checked('pay-group','annually') }}>
+            <label for="annual-pay">Annually</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="annual-salary">
+            <label class="form-label" for="annual-salary">Annual salary</label>
+            <input class="form-control" name="salary" type="text" id="salary" value="{{ data['salary'] }}">
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

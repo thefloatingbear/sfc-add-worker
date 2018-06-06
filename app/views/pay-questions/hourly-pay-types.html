@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/pay-questions/pay-questions-1">Back</a>
+
+      <h1 class="heading-large">Worker record for {{ data['record-name'] }}
+      </h1>
+
+      <form action="different-pay-types" method="post" class="form">
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">
+              How is their hourly rate calculated?
+
+            <span class="form-hint">
+              For example, they might have different rates for bank holidays
+            </span>
+          </p>
+          </legend>
+
+          <div class="multiple-choice" data-target="hourlyrate">
+            <input id="standard-rate" type="radio" name="typeofrate" value="standard">
+            <label for="annual-pay">A standard hourly rate</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="hourlyrate">
+            <label class="form-label" for="hourlyrate">Hourly rate</label>
+            <input class="form-control" name="hourlyrate" type="text" id="rate" value="{{ data['hourlyrate'] }}">
+          </div>
+          <div class="multiple-choice" data-target="hourly-pay">
+            <input id="hourly-pay" type="radio" name="typeofrate" value="hourly pay">
+            <label for="hourly-pay">Different hourly rates</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
