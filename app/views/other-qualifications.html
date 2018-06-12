@@ -16,6 +16,7 @@
         Other qualifications
       </h1>
 
+                  <form action="training" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -23,25 +24,25 @@
             <p class="form-label-bold">Do they have any other qualifications?</p>
           </legend>
 
-          <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+          <div class="multiple-choice" data-target="yesqual">
+            <input id="example-contact-by-email" type="radio" name="otherquals" value="yes" {{ checked('otherquals','yes') }}>
             <label for="example-contact-by-email">Yes</label>
           </div>
-          <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+          <div class="panel panel-border-narrow js-hidden" id="yesqual">
 
             <div class="form-group">
               <label class="form-label" for="full-name-f1">What level is the qualification?</label>
-              <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+              <input class="form-control" id="levelqual" type="text" name="levelqual" value="{{ data['levelqual'] }}">
             </div>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-phone">
-            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+            <input id="example-contact-by-phone" type="radio" name="otherquals" value="no" {{ checked('otherquals','no') }}>
             <label for="example-contact-by-phone">No</label>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+            <input id="example-contact-by-text" type="radio" name="otherquals" value="dontknow" {{ checked('otherquals','dontknow') }}>
             <label for="example-contact-by-text">Don't know</label>
           </div>
 
@@ -49,10 +50,12 @@
 
       </div>
 
-      <p><a href="#">Add a qualification</a></p>
+      <button class="button" type="submit" value="continue">Save and continue</button>
 
+    </form>
 
-      <p><a class="button" href="training">Save and continue</a></p>
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

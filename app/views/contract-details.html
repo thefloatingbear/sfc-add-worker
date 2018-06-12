@@ -17,14 +17,15 @@
       </h1>
 
 
+      <form action="worker-questions-certificate" method="post" class="form">
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What are their contracted weekly hours?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="hours">What are their contracted weekly hours?</label>
+        <input class="form-control" id="hours" type="text" name="hours" value="{{ data['hours'] }}">
       </div>
 
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">How many additional hours did they work in the last 7 days?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="addhours">How many additional hours did they work in the last 7 days?</label>
+        <input class="form-control" id="addhours" type="text" name="addhours" value="{{ data['addhours'] }}">
       </div>
 
       <div class="form-group">
@@ -36,29 +37,33 @@
             </p>
           </legend>
 
-          <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+          <div class="multiple-choice" data-target="rate">
+            <input id="example-contact-by-email" type="radio" name="payrate" value="yes" {{ checked('payrate','yes') }}>
             <label for="example-contact-by-email">Hourly</label>
           </div>
-          <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
-            <label class="form-label" for="contact-email">Hourly rate</label>
-            <input class="form-control" name="contact-email" type="text" id="contact-email">
+          <div class="panel panel-border-narrow js-hidden" id="rate">
+            <label class="form-label" for="hourlyrate">Hourly rate</label>
+            <input class="form-control" name="hourlyrate" type="text" id="hourlyrate" value="{{ data['hourlyrate'] }}">
           </div>
 
-          <div class="multiple-choice" data-target="contact-by-phone">
-            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+          <div class="multiple-choice" data-target="annual">
+            <input id="example-contact-by-phone" type="radio" name="payrate" value="no" {{ checked('payrate','no') }}>
             <label for="example-contact-by-phone">Annually</label>
           </div>
-          <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
-            <label class="form-label" for="contact-phone">Annual salary</label>
-            <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+          <div class="panel panel-border-narrow js-hidden" id="annual">
+            <label class="form-label" for="salary">Annual salary</label>
+            <input class="form-control" name="salary" type="text" id="salary" value="{{ data['salary'] }}">
           </div>
-
 
         </fieldset>
       </div>
 
-      <p><a class="button" href="worker-questions-certificate">Save and continue</a></p>
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

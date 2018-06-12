@@ -16,9 +16,11 @@
         Personal information
       </h1>
 
+      <form action="worker-questions-gender" method="post" class="form">
+
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What is their national insurance number?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="nino">What is their national insurance number?</label>
+        <input class="form-control" id="nino" type="text" name="nino" value="{{ data['nino'] }}">
       </div>
 
       <div class="form-group">
@@ -31,26 +33,30 @@
           <div class="form-date">
             <div class="form-group form-group-day">
               <label class="form-label" for="dob-day">Day</label>
-              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" value="{{ data['dob-day'] }}">
             </div>
             <div class="form-group form-group-month">
               <label class="form-label" for="dob-month">Month</label>
-              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" value="{{ data['dob-month'] }}">
             </div>
             <div class="form-group form-group-year">
               <label class="form-label" for="dob-year">Year</label>
-              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" value="{{ data['dob-year'] }}">
             </div>
           </div>
         </fieldset>
       </div>
 
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What is their home postcode?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="postcode">What is their home postcode?</label>
+        <input class="form-control" id="postcode" type="text" name="postcode" value="{{ data['postcode'] }}">
       </div>
 
-      <p><a class="button" href="worker-questions-gender">Save and continue</a></p>
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
 
       <p><a href="#">Save record</a></p>
 

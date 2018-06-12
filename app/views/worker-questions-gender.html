@@ -16,6 +16,7 @@
         Gender, disability, ethnicity
       </h1>
 
+      <form action="worker-questions-citizenship" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -24,19 +25,19 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="gender" value="man" {{ checked('gender','man') }}>
             <label for="radio-1">Man</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="gender" value="woman" {{ checked('gender','woman') }}>
             <label for="radio-2">Woman</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="gender" value="other" {{ checked('gender','other') }}>
             <label for="radio-3">Other</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="gender" value="dontknow" {{ checked('gender','dontknow') }}>
             <label for="radio-3">Don't know</label>
           </div>
 
@@ -51,19 +52,19 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="disability" value="disabled" {{ checked('disability','disabled') }}>
             <label for="radio-1">Disabled</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="disability" value="not disabled" {{ checked('disability','not disabled') }}>
             <label for="radio-2">Not disabled</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="disability" value="undisclosed" {{ checked('disability','undisclosed') }}>
             <label for="radio-3">Undisclosed</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="disability" value="dontknow" {{ checked('disability','dontknow') }}>
             <label for="radio-3">Don't know</label>
           </div>
 
@@ -72,13 +73,16 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What is their ethnicity?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="ethnicity">What is their ethnicity?</label>
+        <input class="form-control" id="ethnicity" type="text" name="ethnicity" value="{{ data['ethnicity'] }}">
       </div>
 
+      <button class="button" type="submit" value="continue">Save and continue</button>
 
+    </form>
 
-      <p><a class="button" href="worker-questions-citizenship">Save and continue</a></p>
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

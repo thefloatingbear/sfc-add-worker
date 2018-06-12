@@ -12,7 +12,7 @@
       <a href="#" class="link-back">Back</a>
 
       <h1 class="heading-large">
-        Check the worker information and save the record
+        Check the information and save the record
       </h1>
 
 
@@ -48,7 +48,7 @@
             {{data['other-job']}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="other-roles">
               Change<span class="visually-hidden"> name</span>
             </a>
           </dd>
@@ -59,10 +59,10 @@
             National insurance number
           </dt>
           <dd class="cya-answer">
-            QQ123456C
+            {{ data['nino'] }}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="personal-information">
               Change<span class="visually-hidden"> name</span>
             </a>
           </dd>
@@ -73,10 +73,10 @@
             Date of birth
           </dt>
           <dd class="cya-answer">
-            5 January 1978
+            {{data['dob-day']}}/{{data['dob-month']}}/{{data['dob-year']}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="personal-information">
               Change<span class="visually-hidden"> date of birth</span>
             </a>
           </dd>
@@ -87,10 +87,10 @@
             Home Postcode
           </dt>
           <dd class="cya-answer">
-            SE23 6FH
+            {{data['postcode']}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="personal-information">
               Change<span class="visually-hidden"> home address</span>
             </a>
           </dd>
@@ -101,10 +101,10 @@
             Gender
           </dt>
           <dd class="cya-answer">
-            Male
+            {{data['gender']}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="worker-questions-gender">
               Change<span class="visually-hidden"> contact details</span>
             </a>
           </dd>
@@ -115,10 +115,10 @@
           Disability
         </dt>
         <dd class="cya-answer">
-          Not disabled
+          {{data['disability']}}
         </dd>
         <dd class="cya-change">
-          <a href="#">
+          <a href="worker-questions-gender">
             Change<span class="visually-hidden"> name</span>
           </a>
         </dd>
@@ -129,10 +129,10 @@
           Ethnicity
         </dt>
         <dd class="cya-answer">
-          White British
+          {{data['ethnicity']}}
         </dd>
         <dd class="cya-change">
-          <a href="#">
+          <a href="worker-questions-gender">
             Change<span class="visually-hidden"> name</span>
           </a>
         </dd>
@@ -143,10 +143,10 @@
           Nationality
         </dt>
         <dd class="cya-answer">
-          British
+          {{data['nationality']}}
         </dd>
         <dd class="cya-change">
-          <a href="#">
+          <a href="worker-questions-citizenship">
             Change<span class="visually-hidden"> name</span>
           </a>
         </dd>
@@ -157,10 +157,10 @@
           Place of birth
         </dt>
         <dd class="cya-answer">
-          UK
+          {{data['pob']}}
         </dd>
         <dd class="cya-change">
-          <a href="#">
+          <a href="place-of-birth">
             Change<span class="visually-hidden"> name</span>
           </a>
         </dd>
@@ -178,10 +178,10 @@
             Year started in social care
           </dt>
           <dd class="cya-answer">
-            2012
+            {{data['year-started']}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="worker-questions-experience">
               Change<span class="visually-hidden"> previous application number</span>
             </a>
           </dd>
@@ -192,10 +192,10 @@
             Date started current role
           </dt>
           <dd class="cya-answer">
-            20 June 2017
+            {{ data['date-started'] }}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="worker-questions-experience">
               Change<span class="visually-hidden"> licence type</span>
             </a>
           </dd>
@@ -206,10 +206,10 @@
             Recruited from
           </dt>
           <dd class="cya-answer">
-
+            {{ data['recruited'] }}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="worker-questions-experience">
               Change<span class="visually-hidden"> home address</span>
             </a>
           </dd>
@@ -220,10 +220,10 @@
             Sick leave
           </dt>
           <dd class="cya-answer">
-            4 days
+            {{ data['sickleave'] }}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="sick-leave">
               Change<span class="visually-hidden"> licence period</span>
             </a>
           </dd>
@@ -234,7 +234,7 @@
             Employment status
           </dt>
           <dd class="cya-answer">
-            Permanent
+            {{ data['sickleave'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -248,7 +248,7 @@
             Guaranteed hours
           </dt>
           <dd class="cya-answer">
-            Yes
+            {{ data['zerohours'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -262,7 +262,7 @@
             Type of contract
           </dt>
           <dd class="cya-answer">
-            Full time
+            {{ data['contracttype'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -276,7 +276,7 @@
             Weekly hours
           </dt>
           <dd class="cya-answer">
-            40
+            {{ data['hours'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -290,7 +290,7 @@
             Additional hours
           </dt>
           <dd class="cya-answer">
-            2
+            {{ data['addhours'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -304,7 +304,7 @@
             Rate of pay
           </dt>
           <dd class="cya-answer">
-            £27,000
+            {{ data['hourlyrate'] }}{{ data['salary'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -325,7 +325,7 @@
             Care certificate
           </dt>
           <dd class="cya-answer">
-            No
+            {{ data['carecert'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -339,7 +339,7 @@
             Apprenticeship
           </dt>
           <dd class="cya-answer">
-            No
+            {{ data['apprenticeship'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -353,7 +353,7 @@
             Social care qualifications
           </dt>
           <dd class="cya-answer">
-            No
+            {{ data['scqual'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -367,7 +367,7 @@
             Other qualifications
           </dt>
           <dd class="cya-answer">
-            No
+            {{ data['otherquals'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">
@@ -381,7 +381,7 @@
             Training
           </dt>
           <dd class="cya-answer">
-
+            {{ data['training'] }}
           </dd>
           <dd class="cya-change">
             <a href="#">

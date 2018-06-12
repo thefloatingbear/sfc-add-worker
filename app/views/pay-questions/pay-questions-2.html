@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">Different hourly rates
+      </h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>Different hourly rates could include weekend or bank holiday hours.</p>
+        <p>We will use this information to work out the overall average hourly rate.</p>
+
+        <div class="form-group">
+          <label class="form-label" for="full-name-f1">What is their standard rate?</label>
+          <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="full-name-f1">How much is the rate?</label>
+          <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="full-name-f1">How many hours have they worked at this rate in the last 7 days?</label>
+          <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Save and continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

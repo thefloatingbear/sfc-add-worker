@@ -16,6 +16,8 @@
         Contract type
       </h1>
 
+
+      <form action="contract-details" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -24,27 +26,27 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="empstatus" value="perm" {{ checked('empstatus','perm') }}>
             <label for="radio-1">Permanent</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="empstatus" value="temp" {{ checked('empstatus','temp') }}>
             <label for="radio-2">Temporary</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="empstatus" value="pool" {{ checked('empstatus','pool') }}>
             <label for="radio-3">Pool</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="empstatus" value="agency" {{ checked('empstatus','agency') }}>
             <label for="radio-3">Agency</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="empstatus" value="volunteer" {{ checked('empstatus','volunteer') }}>
             <label for="radio-3">Volunteer</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="empstatus" value="other" {{ checked('empstatus','other') }}>
             <label for="radio-3">Other</label>
           </div>
 
@@ -60,15 +62,15 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="zerohours" value="yes" {{ checked('zerohours','yes') }}>
             <label for="radio-1">Yes</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="zerohours" value="no" {{ checked('zerohours','no') }}>
             <label for="radio-2">No</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="zerohours" value="dontknow" {{ checked('zerohours','dontknow') }}>
             <label for="radio-3">Don't know</label>
           </div>
 
@@ -85,15 +87,15 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="contracttype" value="full" {{ checked('contracttype','full') }}>
             <label for="radio-1">Full time</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="contracttype" value="part" {{ checked('contracttype','part') }}>
             <label for="radio-2">Part time</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="contracttype" value="neither" {{ checked('contracttype','neither') }}>
             <label for="radio-3">Neither of these</label>
           </div>
 
@@ -101,8 +103,12 @@
 
       </div>
 
+      <button class="button" type="submit" value="continue">Save and continue</button>
 
-      <p><a class="button" href="contract-details">Save and continue</a></p>
+    </form>
+
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

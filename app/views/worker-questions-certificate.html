@@ -16,6 +16,7 @@
         Care certificate
       </h1>
 
+                  <form action="apprenticeship" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -24,15 +25,15 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="carecert" value="yes comp" {{ checked('carecert','yes comp') }}>
             <label for="radio-1">Yes, completed</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="carecert" value="yes start" {{ checked('carecert','yes start') }}>
             <label for="radio-2">Yes, started</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="carecert" value="no" {{ checked('carecert','no') }}>
             <label for="radio-3">No</label>
           </div>
 
@@ -40,12 +41,17 @@
       </div>
 
       <div class="form-group">
-  <label class="form-label-bold" for="full-name-f1">When did they complete the certificate?</label>
-  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+  <label class="form-label-bold" for="datecomplete">When did they complete the certificate?</label>
+  <input class="form-control" id="datecomplete" type="text" name="datecomplete" value="{{ data['datecomplete'] }}">
 </div>
 
-      <p><a class="button" href="apprenticeship">Save and continue</a></p>
-      <p><a href="#">Save record</a></p>
+<button class="button" type="submit" value="continue">Save and continue</button>
+
+</form>
+
+<br>
+
+<p><a href="#">Save record</a></p>
 
     </div>
   </div>

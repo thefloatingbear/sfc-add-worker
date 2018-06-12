@@ -16,6 +16,7 @@
         Apprenticeship
       </h1>
 
+                  <form action="care-qualifications" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -24,22 +25,27 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <input id="radio-1" type="radio" name="apprenticeship" value="yes" {{ checked('apprenticeship','yes') }}>
             <label for="radio-1">Yes</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            <input id="radio-2" type="radio" name="apprenticeship" value="no" {{ checked('apprenticeship','no') }}>
             <label for="radio-2">No</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            <input id="radio-3" type="radio" name="apprenticeship" value="dontknow" {{ checked('apprenticeship','dontknow') }}>
             <label for="radio-3">Don't know</label>
           </div>
 
         </fieldset>
       </div>
 
-      <p><a class="button" href="care-qualifications">Save and continue</a></p>
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

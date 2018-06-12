@@ -16,6 +16,7 @@
         Nationality
       </h1>
 
+      <form action="place-of-birth" method="post" class="form">
       <div class="form-group">
         <fieldset>
 
@@ -26,31 +27,31 @@
           </legend>
 
           <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+            <input id="example-contact-by-email" type="radio" name="nationality" value="Yes" {{ checked('nationality','Yes') }}>
             <label for="example-contact-by-email">Yes</label>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-phone">
-            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+            <input id="example-contact-by-phone" type="radio" name="nationality" value="No" {{ checked('nationality','No') }}>
             <label for="example-contact-by-phone">No</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
             <legend>
-                  <p>Do they hold British citizenship?</p>
+                  <p>Do they hold British nationalityship?</p>
             </legend>
 
                 <div class="multiple-choice">
-                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                  <input id="radio-1" type="radio" name="citizen" value="yes" {{ checked('citizen','yes') }}>
                   <label for="radio-1">Yes</label>
                 </div>
                 <div class="multiple-choice">
-                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                  <input id="radio-2" type="radio" name="citizen" value="no" {{ checked('citizen','no') }}>
                   <label for="radio-2">No</label>
                 </div>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+            <input id="example-contact-by-text" type="radio" name="nationality" value="dontknow" {{ checked('nationality','dontknow') }}>
             <label for="example-contact-by-text">Don't know</label>
           </div>
 
@@ -58,11 +59,16 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">What is their nationality?</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label-bold" for="other-nationality">What is their nationality?</label>
+        <input class="form-control" id="other-nationality" type="text" name="other-nationality" value="{{ data['other-nationality'] }}">
       </div>
 
-      <p><a class="button" href="place-of-birth">Save and continue</a></p>
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
       <p><a href="#">Save record</a></p>
 
     </div>

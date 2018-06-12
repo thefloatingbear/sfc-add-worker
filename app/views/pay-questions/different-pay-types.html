@@ -22,16 +22,20 @@
       <form class="form" action="/url/of/next/page" method="post">
 
         <table id="numTable">
+          <thead>
           <tr>
-            <th>Type of pay</th>
-            <th>Rate of pay</th>
-            <th>Hours worked in the last 7 days</th>
+            <th scope="col">Type of pay</th>
+            <th class="numeric" scope="col">Rate of pay</th>
+            <th class="numeric" scope="col">Hours worked in the last 7 days</th>
           </tr>
+          </thead>
+          <tbody>
           <tr>
-            <td><div contenteditable></div></td>
-            <td><div contenteditable></div></td>
-            <td><div contenteditable></div></td>
+            <td scope="row"><div contenteditable></div></td>
+            <td class="numeric"><div contenteditable></div></td>
+            <td class="numeric"><div contenteditable></div></td>
           </tr>
+          </tbody>
         </table>
 
         <a href="#">Add another</a>
