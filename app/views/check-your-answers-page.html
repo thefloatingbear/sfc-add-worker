@@ -140,7 +140,7 @@
 
       <div>
         <dt class="cya-question">
-          Nationality
+          British
         </dt>
         <dd class="cya-answer">
           {{data['nationality']}}
@@ -154,10 +154,52 @@
 
       <div>
         <dt class="cya-question">
-          Place of birth
+          British citizenship
         </dt>
         <dd class="cya-answer">
-          {{data['pob']}}
+          {{data['citizen']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-citizenship">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Nationality
+        </dt>
+        <dd class="cya-answer">
+          {{data['other-nationality']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-citizenship">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Born in the UK
+        </dt>
+        <dd class="cya-answer">
+          {{data['pob']}} {{ data['country'] }}
+        </dd>
+        <dd class="cya-change">
+          <a href="place-of-birth">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Year arrived in the UK
+        </dt>
+        <dd class="cya-answer">
+          {{ data['arrival'] }}
         </dd>
         <dd class="cya-change">
           <a href="place-of-birth">
