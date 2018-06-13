@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="pay-questions-4">Back</a>
+
+      <h1 class="heading-large">Rates of pay
+      </h1>
+
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Type of pay</th>
+          <th class="numeric" scope="col">Rate of pay</th>
+          <th class="numeric" scope="col">Hours worked in the last 7 days</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td scope="row">Standard rate</td>
+          <td class="numeric">{{ data['standardrate'] }}</td>
+          <td class="numeric">{{ data['hoursworked'] }}</td>
+        </tr>
+        <tr>
+          <td scope="row">{{ data['ratetype1'] }}</td>
+          <td class="numeric">{{ data['standardrate1'] }}</td>
+          <td class="numeric">{{ data['hoursworked1'] }}</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <form class="form" action="pay-questions-5" method="post">
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend>
+              <h3 class="heading-small">
+                Are they paid any other rates?
+                <span class="form-hint">
+                  For example, a different rate for bank holidays
+                </span>
+              </h3>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+              <label for="radio-inline-1">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-2">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Save and continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
