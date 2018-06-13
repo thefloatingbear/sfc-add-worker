@@ -10,7 +10,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="pay-questions-4">Back</a>
+      <a class="link-back" href="pay-questions-3">Back</a>
 
       <h1 class="heading-large">Rates of pay
       </h1>
@@ -21,6 +21,7 @@
           <th scope="col">Type of pay</th>
           <th class="numeric" scope="col">Rate of pay</th>
           <th class="numeric" scope="col">Hours worked in the last 7 days</th>
+          <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@
           <td scope="row">Standard rate</td>
           <td class="numeric">{{ data['standardrate'] }}</td>
           <td class="numeric">{{ data['hoursworked'] }}</td>
+          <td><a href="pay-questions-2">Edit</a>
         </tr>
         <tr>
           <td scope="row">{{ data['ratetype1'] }}</td>
